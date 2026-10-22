@@ -1,6 +1,11 @@
+"""
+Mental Health Social Media Analyzer - Standalone CLI & Core Module
+This module provides the standalone CLI terminal interface as well as compatibility
+functions for analyzing social media posts for emotional distress and contributing factors.
+"""
 
 import os
-
+from pathlib import Path
 from dotenv import load_dotenv
 
 from langchain_core.documents import Document
@@ -12,36 +17,32 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_openai import OpenAIEmbeddings
 from langchain_chroma import Chroma
 
-
 # --------------------------------------------------
-# 1. Configuration
+# 1. Configuration & Path Resolution
 # --------------------------------------------------
-
-load_dotenv()
+BASE_DIR = Path(__file__).resolve().parent
+ENV_FILE = BASE_DIR / ".env"
+load_dotenv(dotenv_path=ENV_FILE)
 
 if not os.getenv("OPENAI_API_KEY"):
-    raise ValueError(
-        "OPENAI_API_KEY is missing. Add it to your .env file."
-    )
+    raise ValueError("OPENAI_API_KEY is missing. Add it to your .env file.")
 
-DB_DIR = "./rag_db"
+DB_DIR = str(BASE_DIR / "rag_db")
 COLLECTION_NAME = "mental_health_rag"
 
 embedding_model = OpenAIEmbeddings(
-    model="text-embedding-3-small"
+    model=os.getenv("EMBEDDING_MODEL", "text-embedding-3-small")
 )
 
 llm = init_chat_model(
-    model="gpt-4o-mini",
+    model=os.getenv("LLM_MODEL", "gpt-4o-mini"),
     model_provider="openai",
     temperature=0
 )
 
-
 # --------------------------------------------------
 # 2. Project Knowledge Base
 # --------------------------------------------------
-
 KNOWLEDGE_BASE = """
 Mental Health Analysis of Social Media Posts
 
@@ -95,20 +96,22 @@ reliably determine the actual cause of someone's distress.
 # --------------------------------------------------
 # 3. Create or Load the Vector Store
 # --------------------------------------------------
-
 def create_kb():
     """Create the knowledge base once if it does not exist."""
+    os.makedirs(DB_DIR, exist_ok=True)
 
     if os.path.exists(DB_DIR) and os.listdir(DB_DIR):
-        vector_store = Chroma(
-            collection_name=COLLECTION_NAME,
-            embedding_function=embedding_model,
-            persist_directory=DB_DIR
-        )
-
-        if vector_store._collection.count() > 0:
-            print("Existing knowledge base loaded.")
-            return vector_store
+        try:
+            vector_store = Chroma(
+                collection_name=COLLECTION_NAME,
+                embedding_function=embedding_model,
+                persist_directory=DB_DIR
+            )
+            if vector_store._collection.count() > 0:
+                print("Existing knowledge base loaded.")
+                return vector_store
+        except Exception:
+            pass
 
     splitter = RecursiveCharacterTextSplitter(
         chunk_size=500,
@@ -130,16 +133,13 @@ def create_kb():
     )
 
     print(f"Knowledge base created with {len(chunks)} chunks.")
-
     return vector_store
 
 
 # --------------------------------------------------
 # 4. Build the RAG Chain
 # --------------------------------------------------
-
 def build_rag_chain(vector_store):
-
     retriever = vector_store.as_retriever(
         search_type="similarity",
         search_kwargs={"k": 3}
@@ -216,10 +216,8 @@ def build_rag_chain(vector_store):
 # --------------------------------------------------
 # 5. Analyze an Uploaded Post
 # --------------------------------------------------
-
 def analyze_post(post: str, rag_chain, retriever):
     """Analyze user-provided text without indexing it."""
-
     if not isinstance(post, str) or not post.strip():
         raise ValueError("Please provide a non-empty social media post.")
 
@@ -250,7 +248,6 @@ def analyze_post(post: str, rag_chain, retriever):
 # --------------------------------------------------
 # 6. Run the Application in the Terminal
 # --------------------------------------------------
-
 def main():
     vector_store = create_kb()
     rag_chain, retriever = build_rag_chain(vector_store)
@@ -260,32 +257,34 @@ def main():
     print("Type 'exit' to quit.\n")
 
     while True:
-        post = input("Enter social media post: ").strip()
-
-        if post.lower() == "exit":
-            print("Application closed.")
-            break
-
-        if not post:
-            print("Please enter a non-empty post.\n")
-            continue
-
         try:
+            post = input("Enter social media post: ").strip()
+
+            if post.lower() == "exit":
+                print("Application closed.")
+                break
+
+            if not post:
+                print("Please enter a non-empty post.\n")
+                continue
+
             result = analyze_post(post, rag_chain, retriever)
 
             print("\n--- Analysis Result ---")
             print(result["analysis"])
 
             print("\n--- Retrieved Sources ---")
-
             for source in result["sources"]:
                 print(f"Source: {source['source']}")
                 print(f"Excerpt: {source['excerpt']}\n")
 
-        except Exception as error:
-            print(f"Analysis failed: {error}")
+            print("-" * 60)
 
-        print("-" * 60)
+        except KeyboardInterrupt:
+            print("\nExiting...")
+            break
+        except Exception as error:
+            print(f"Analysis failed: {error}\n")
 
 
 if __name__ == "__main__":
