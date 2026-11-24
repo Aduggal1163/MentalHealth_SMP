@@ -1,0 +1,301 @@
+================================================================================
+          MindPulse AI — Software Engineering Project Notebook
+================================================================================
+Academic Domain  : Computational Linguistics, NLP, RAG Architecture
+System Platform  : React 19 + FastAPI + ChromaDB + OpenAI
+Document Content : Sections 1 through 7 (Complete Project & SE Lifecycle Artifacts)
+================================================================================
+
+
+1. PROJECT DESCRIPTION (IN SIMPLE WORDS)
+================================================================================
+
+1.1 What is the problem?
+------------------------
+When students or employees feel overwhelmed, sad, or burned out, they often write 
+posts on Twitter, Reddit, or forums. 
+- Traditional tools just look for keywords like "sad" or "depressed" (which causes 
+  lots of mistakes).
+- Reading thousands of posts manually is impossible.
+
+1.2 What is MindPulse AI?
+-------------------------
+MindPulse AI is a smart web app that reads a social media post and answers 3 simple 
+questions:
+1. Is the person in emotional distress? (Yes / No)
+2. Why are they distressed? It assigns the reason to one of 6 clear categories:
+   - [1] Jobs/Career : Heavy workload, boss pressure, exam deadlines, unemployment.
+   - [2] Relationship: Breakups, divorce, romantic grief, family arguments.
+   - [3] Bias/Abuse  : Bullying, cyberbullying, threats, discrimination.
+   - [4] Medication  : Adverse side effects from psychiatric pills, dosage changes.
+   - [5] Alienation  : Chronic loneliness, feeling invisible or disconnected from everyone.
+   - [6] No Reason   : Feeling distressed without any clear cause mentioned.
+3. What is the proof? It copies the exact verbatim words from the post as evidence 
+   (no hallucinations or speculation).
+
+1.3 Non-Diagnostic Ethical Rule
+-------------------------------
+IMPORTANT NOTE:
+MindPulse AI never provides medical or psychiatric diagnoses. It is strictly a 
+linguistic research tool. If someone is in severe distress, it provides a 1-click 
+button to contact 24/7 emergency crisis hotlines (such as 988).
+
+
+2. LEVEL 1 DATA FLOW DIAGRAM (DFD)
+================================================================================
+
+A Level 1 DFD shows the internal processes, where data travels, and where data is stored.
+
+2.1 The 4 Core Elements:
+------------------------
+- External Entities : User (Researcher) and OpenAI API.
+- Processes         : 1.0, 2.0, 3.0, 4.0.
+- Data Stores       : D1: Research Guidelines Database (ChromaDB)
+                      D2: Session History Storage (RAM Buffer)
+- Data Flows        : The data moving between them.
+
+2.2 Level 1 DFD Flowchart (Hand-Drawn / Exam Layout):
+------------------------------------------------------
+
+           +---------------------------------------+
+           |           User (Researcher)           |
+           +---------------------------------------+
+              |                                 ^
+      1. Post |                                 | 8. Display Result Card
+              v                                 |
+     +---------------------------------------------+
+     |         1.0 Receive & Clean Post            |
+     +---------------------------------------------+
+              |
+      2. Cleaned Post Text
+              v
+     +---------------------------------------------+       +-------------------------+
+     |       2.0 Find Matching Rules (RAG)         | <===> | D1: ChromaDB Guidelines |
+     +---------------------------------------------+       +-------------------------+
+              |
+      4. Post + Retrieved Guidelines
+              v
+     +---------------------------------------------+       +-------------------------+
+     |        3.0 Run AI Inference (LLM)           | <===> |    External OpenAI API  |
+     +---------------------------------------------+       +-------------------------+
+              |
+      6. Category + Extracted Quotes
+              v
+     +---------------------------------------------+       +-------------------------+
+     |        4.0 Format & Save Result             | <===> |   D2: Session History   |
+     +---------------------------------------------+       +-------------------------+
+
+2.3 Process Descriptions:
+-------------------------
+- Process 1.0 (Receive & Clean Post) : Ingests raw post, validates length (>= 3 chars), 
+                                       removes malformed input.
+- Process 2.0 (Find Matching Rules)  : Vectorizes post and retrieves top-3 relevant 
+                                       research guidelines from ChromaDB.
+- Process 3.0 (Run AI Inference)     : Prompts OpenAI model (T=0.0) with retrieved 
+                                       context and post to classify and extract quotes.
+- Process 4.0 (Format & Save Result) : Stores analysis in volatile session history 
+                                       and renders structured card on user interface.
+
+
+3. FUNCTION POINT COUNTING (FPC / FPA)
+================================================================================
+
+Function Point Counting measures how much functionality software delivers to the 
+user (like counting rooms in a house rather than counting bricks).
+
+3.1 Step 1: Count the 5 Core Components
+---------------------------------------
+
++----------------------------------+-----------------------------+-------+-----------+--------------+
+| Component                        | What it is in MindPulse AI  | Count | Weight    | Total Points |
++----------------------------------+-----------------------------+-------+-----------+--------------+
+| External Inputs (EI)             | Single analyze, batch, clear|   4   | 4 (Avg)   | 4 x 4  = 16  |
+| External Outputs (EO)            | Result card, charts, export |   3   | 6 (Avg/Hi)| 3 x 6  = 18  |
+| External Inquiries (EQ)          | Health, categories, presets |   5   | 3 (Low)   | 5 x 3  = 15  |
+| Internal Logical Files (ILF)     | Chroma DB, session history  |   2   | 12(Avg/Hi)| 2 x 12 = 24  |
+| External Interface Files (EIF)   | OpenAI Embeddings & Chat API|   2   | 9 (Avg/Hi)| 2 x 9  = 18  |
++----------------------------------+-----------------------------+-------+-----------+--------------+
+| TOTAL UNADJUSTED FUNCTION POINTS |                             |       |           | 91 to 93 FP  |
++----------------------------------+-----------------------------+-------+-----------+--------------+
+
+Formula:
+  UFP = 16 + 18 + 15 + 24 + 18 = 91 FP
+
+3.2 Step 2: Value Adjustment Factor (VAF)
+-----------------------------------------
+Evaluated across 14 standard technical characteristics (data communication, 
+usability, performance, etc.). 
+Sum of degrees of influence = 49:
+
+  VAF = 0.65 + (0.01 x 49) = 0.65 + 0.49 = 1.14
+
+3.3 Step 3: Final Adjusted Function Points (AFP)
+------------------------------------------------
+  AFP = UFP x VAF = 91 x 1.14 = 103.74 to 106 FP
+
+Converting to Code Size (Python ~ 45 LOC/FP):
+  Code Size = 104 x 45 LOC/FP ≈ 4,680 Lines of Code (4.68 KLOC)
+
+
+4. COCOMO MODEL (EFFORT, TIME, COST ESTIMATION)
+================================================================================
+
+COCOMO (Constructive Cost Model) answers:
+- How long will it take?
+- How many developers do we need?
+- How much will it cost?
+
+4.1 Project Mode: Organic
+-------------------------
+(Small team <= 4 developers, familiar problem domain, flexible environment).
+
+- Size (KLOC) : 4.5 KLOC (approx 4,500 lines of code)
+- Constants   : a = 2.4,  b = 1.05,  c = 2.5,  d = 0.38
+
+4.2 Calculations:
+-----------------
+1. Effort (E) in Person-Months:
+   Effort = a x (KLOC)^b
+          = 2.4 x (4.5)^1.05
+          ≈ 2.4 x 4.85
+          ≈ 11.64 Person-Months
+   (Meaning 1 developer working alone would need ~11.6 months).
+
+2. Development Time (D) in Calendar Months:
+   Time = c x (Effort)^d
+        = 2.5 x (11.64)^0.38
+        ≈ 2.5 x 2.54
+        ≈ 6.35 Months
+
+3. Recommended Team Size (S):
+   Team Size = Effort / Time
+             = 11.64 / 6.35
+             ≈ 1.83 ≈ 2 Full-Time Developers
+
+4. Total Development Cost:
+   Assuming $4,000 (or Rs 1,00,000) per person-month:
+   Total Cost = 11.64 x $4,000 ≈ $46,560
+
+
+5. CRITICAL PATH METHOD (CPM) PROJECT SCHEDULE
+================================================================================
+
+The Critical Path is the longest sequence of dependent tasks. If any task on 
+this path is delayed by even 1 day, the ENTIRE project deadline is delayed.
+
+5.1 Task Breakdown & Schedule Table:
+------------------------------------
+
++------+------------------------------------+------------+------+----+----+----+----+-------+-----------+
+| Task | Task Description                   | Depends On | Days | ES | EF | LS | LF | Slack | Critical? |
++------+------------------------------------+------------+------+----+----+----+----+-------+-----------+
+|  A   | Requirements & Category Rules      | None       |  5   |  0 |  5 |  0 |  5 |   0   | YES       |
+|  B   | Database & Vector Guidelines Setup | A          |  6   |  5 | 11 |  5 | 11 |   0   | YES       |
+|  C   | Backend API Architecture (FastAPI) | A          |  5   |  5 | 10 |  6 | 11 |   1   | No        |
+|  D   | RAG Search & LLM Inference Logic   | B, C       |  8   | 11 | 19 | 11 | 19 |   0   | YES       |
+|  E   | Frontend UI Design (React)         | A          |  6   |  5 | 11 |  9 | 15 |   4   | No        |
+|  F   | Connect Frontend + Backend (API)   | D, E       |  4   | 19 | 23 | 19 | 23 |   0   | YES       |
+|  G   | End-to-End Testing & Bug Fixing    | F          |  5   | 23 | 28 | 23 | 28 |   0   | YES       |
+|  H   | Final Documentation & Presentation | G          |  3   | 28 | 31 | 28 | 31 |   0   | YES       |
++------+------------------------------------+------------+------+----+----+----+----+-------+-----------+
+
+Definitions:
+- ES = Early Start,  EF = Early Finish (EF = ES + Days)
+- LS = Late Start,   LF = Late Finish  (LS = LF - Days)
+- Slack = LS - ES = LF - EF  (Slack = 0 means CRITICAL task)
+
+5.2 Critical Path Result:
+-------------------------
+Critical Path:
+  A -> B -> D -> F -> G -> H
+
+Total Project Duration:
+  5 + 6 + 8 + 4 + 5 + 3 = 31 Working Days (approx 6 Weeks)
+
+
+6. AGILE USER STORIES (IN SIMPLE FORMAT)
+================================================================================
+
+Format: "As a [role], I want to [action], so that [benefit]."
+
+Story 1: Single Post Analysis
+-----------------------------
+- As a: Researcher or evaluator,
+- I want to: Paste a single social media post and click "Analyze",
+- So that: I can see if distress exists, which of the 6 categories caused it, 
+           and read the exact evidence quotes.
+- Done When:
+  * The predicted category is shown clearly.
+  * Verbatim words from the post are highlighted as proof.
+- Points: 5
+
+Story 2: Batch Analysis of Multiple Posts
+-----------------------------------------
+- As a: Data scientist,
+- I want to: Paste up to 25 posts separated by blank lines,
+- So that: I can analyze an entire test dataset at once and see an aggregate 
+           category percentage bar.
+- Done When:
+  * All posts are processed without server crashes.
+  * A summary graph shows the category distribution.
+- Points: 8
+
+Story 3: Emergency Helpline Modal
+---------------------------------
+- As a: User who may be experiencing acute distress,
+- I want to: Click a "Crisis Resources" badge,
+- So that: I can see 24/7 verified crisis phone numbers (like 988) and call them directly.
+- Done When:
+  * Clicking the badge opens a popup with verified telephone and SMS helplines.
+- Points: 2
+
+Story 4: Clickable Sample Presets
+---------------------------------
+- As an: Examiner testing the project,
+- I want to: Click preset buttons (like "Job Burnout" or "Breakup"),
+- So that: I don't have to write my own test posts.
+- Done When:
+  * Clicking any chip instantly fills the input text box with a verified benchmark post.
+- Points: 2
+
+Story 5: Export Session History to JSON
+---------------------------------------
+- As a: Student or researcher,
+- I want to: Click "Export JSON",
+- So that: I can download all my analyzed posts and evidence quotes to include 
+           in my project submission.
+- Done When:
+  * A .json file containing all recent analyses downloads automatically.
+- Points: 3
+
+
+7. QUICK VIVA CHEAT SHEET (FOR EVALUATION)
+================================================================================
+
++----------------------------------+-------------------------------------------------------------+
+| Viva Question                    | Easy 1-Sentence Answer                                      |
++----------------------------------+-------------------------------------------------------------+
+| What does MindPulse AI do?       | Reads a social media post, checks for emotional distress,   |
+|                                  | classifies the reason into 6 categories, and copies the     |
+|                                  | exact words as proof.                                       |
++----------------------------------+-------------------------------------------------------------+
+| Why use RAG with ChromaDB?       | To ground the AI in strict research rules so it does not    |
+|                                  | hallucinate or make speculative guesses.                    |
++----------------------------------+-------------------------------------------------------------+
+| What is the Function Point count?| Around 104 to 106 FP, which equals roughly 4,500 lines      |
+|                                  | of code.                                                    |
++----------------------------------+-------------------------------------------------------------+
+| What does COCOMO tell us?        | About 11.6 person-months of effort, taking ~6 months with   |
+|                                  | a team of 2 developers.                                     |
++----------------------------------+-------------------------------------------------------------+
+| What is the Critical Path?       | A -> B -> D -> F -> G -> H, taking exactly 31 working days  |
+|                                  | (~6 weeks).                                                 |
++----------------------------------+-------------------------------------------------------------+
+| Does it give clinical diagnosis? | No. It is strictly a linguistic research tool; clinical     |
+|                                  | diagnosis requires a licensed doctor.                       |
++----------------------------------+-------------------------------------------------------------+
+
+================================================================================
+                         End of Project Documentation
+================================================================================
+

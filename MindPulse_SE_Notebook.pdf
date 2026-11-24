@@ -1,0 +1,435 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Count 5 /Kids [ 3 0 R 5 0 R 7 0 R 9 0 R 11 0 R ] >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Contents 4 0 R /Resources << /Font << /F1 13 0 R /F2 14 0 R /F3 15 0 R /F4 16 0 R /F5 17 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 5199 >>
+stream
+0.080 0.160 0.320 rg 0.040 0.100 0.220 RG 1 w 40.00 719.89 515.28 76.00 re B
+0.250 0.450 0.750 RG 1.5 w 52.00 727.89 m 543.28 727.89 l S
+BT /F2 17 Tf 1.000 1.000 1.000 rg 1 0 0 1 56.00 767.89 Tm (MindPulse AI -- Software Engineering Notebook) Tj ET
+BT /F1 9.8 Tf 0.820 0.900 0.980 rg 1 0 0 1 56.00 749.89 Tm (Mental Health & Distress Language Analyzer | SRS, Level 1 DFD, FPC, COCOMO, CPM & Agile Stories) Tj ET
+BT /F3 8 Tf 0.650 0.750 0.880 rg 1 0 0 1 56.00 734.89 Tm (Thapar University Academic Lab Submission | SE / SPM Project Portfolio) Tj ET
+0.930 0.950 0.980 rg 0.780 0.840 0.920 RG 0.8 w 40.00 675.89 515.28 22.00 re B
+0.120 0.320 0.700 rg 40.00 675.89 4.50 22.00 re f
+BT /F2 11 Tf 0.080 0.180 0.420 rg 1 0 0 1 50.00 681.89 Tm (1. Project Description \(In Simple Plain Language\)) Tj ET
+BT /F2 10 Tf 0.140 0.180 0.280 rg 1 0 0 1 40.00 663.89 Tm (Problem Statement) Tj ET
+0.250 0.450 0.750 RG 0.8 w 40.00 661.39 m 160.00 661.39 l S
+BT /F1 8.8 Tf 0.180 0.220 0.260 rg 1 0 0 1 40.00 651.89 Tm (When individuals experience severe emotional distress, anxiety, or burnout, they frequently express their) Tj ET
+BT /F1 8.8 Tf 0.180 0.220 0.260 rg 1 0 0 1 40.00 639.39 Tm (struggles on social media platforms \(such as Reddit, Twitter, and student discussion forums\). Traditional) Tj ET
+BT /F1 8.8 Tf 0.180 0.220 0.260 rg 1 0 0 1 40.00 626.89 Tm (algorithmic tools rely strictly on naive keyword matching \(e.g. searching for words like 'sad'\), which leads) Tj ET
+BT /F1 8.8 Tf 0.180 0.220 0.260 rg 1 0 0 1 40.00 614.39 Tm (to high false positives and completely misses subtle context. Meanwhile, manual review of millions of posts) Tj ET
+BT /F1 8.8 Tf 0.180 0.220 0.260 rg 1 0 0 1 40.00 601.89 Tm (is humanly impossible.) Tj ET
+BT /F2 10 Tf 0.140 0.180 0.280 rg 1 0 0 1 40.00 582.39 Tm (What is MindPulse AI?) Tj ET
+0.250 0.450 0.750 RG 0.8 w 40.00 579.89 m 160.00 579.89 l S
+BT /F1 8.8 Tf 0.180 0.220 0.260 rg 1 0 0 1 40.00 570.39 Tm (MindPulse AI is an academic Natural Language Processing \(NLP\) and Retrieval-Augmented Generation \(RAG\)) Tj ET
+BT /F1 8.8 Tf 0.180 0.220 0.260 rg 1 0 0 1 40.00 557.89 Tm (platform. It reads unstructured social media posts and answers three essential questions:) Tj ET
+BT /F1 8.6 Tf 0.180 0.220 0.260 rg 1 0 0 1 40.00 542.39 Tm (- 1. Distress Detection: Determines whether the language indicates genuine emotional distress \(Yes / No\).) Tj ET
+BT /F1 8.6 Tf 0.180 0.220 0.260 rg 1 0 0 1 40.00 527.39 Tm (- 2. Causal Classification: Identifies the underlying contributing factor strictly mapped to 6 empirical) Tj ET
+BT /F1 8.6 Tf 0.180 0.220 0.260 rg 1 0 0 1 40.00 515.39 Tm (categories.) Tj ET
+BT /F1 8.6 Tf 0.180 0.220 0.260 rg 1 0 0 1 40.00 500.39 Tm (- 3. Verbatim Evidence Extraction: Extracts exact phrases from the original post as factual justification.) Tj ET
+BT /F2 10 Tf 0.140 0.180 0.280 rg 1 0 0 1 40.00 481.39 Tm (The 6 Authorized Research Categories) Tj ET
+0.250 0.450 0.750 RG 0.8 w 40.00 478.89 m 160.00 478.89 l S
+BT /F1 8.6 Tf 0.180 0.220 0.260 rg 1 0 0 1 40.00 469.39 Tm (- Jobs/Career: Workplace pressure, toxic management, unemployment, burnout, extreme overtime, academic) Tj ET
+BT /F1 8.6 Tf 0.180 0.220 0.260 rg 1 0 0 1 40.00 457.39 Tm (deadlines.) Tj ET
+BT /F1 8.6 Tf 0.180 0.220 0.260 rg 1 0 0 1 40.00 442.39 Tm (- Relationship: Romantic breakups, divorce, marital grief, domestic betrayal, or severe family conflict.) Tj ET
+BT /F1 8.6 Tf 0.180 0.220 0.260 rg 1 0 0 1 40.00 427.39 Tm (- Bias/Abuse: Bullying, cyberbullying, physical threats, harassment, discrimination, or abusive dynamics.) Tj ET
+BT /F1 8.6 Tf 0.180 0.220 0.260 rg 1 0 0 1 40.00 412.39 Tm (- Medication: Explicit references to psychiatric prescriptions, dosage modifications, or adverse side) Tj ET
+BT /F1 8.6 Tf 0.180 0.220 0.260 rg 1 0 0 1 40.00 400.39 Tm (effects.) Tj ET
+BT /F1 8.6 Tf 0.180 0.220 0.260 rg 1 0 0 1 40.00 385.39 Tm (- Alienation: Profound social isolation, feeling invisible, detachment, and complete lack of connection.) Tj ET
+BT /F1 8.6 Tf 0.180 0.220 0.260 rg 1 0 0 1 40.00 370.39 Tm (- No Reason: Emotional distress expressed without an identifiable cause, OR healthy neutral/positive text.) Tj ET
+0.990 0.980 0.930 rg 0.850 0.550 0.150 RG 0.8 w 40.00 287.39 515.28 68.00 re B
+0.850 0.550 0.150 rg 40.00 287.39 3.50 68.00 re f
+BT /F2 9 Tf 0.420 0.220 0.050 rg 1 0 0 1 50.00 342.39 Tm (CRITICAL ETHICAL & ACADEMIC DISCLAIMER) Tj ET
+BT /F3 8.5 Tf 0.280 0.220 0.180 rg 1 0 0 1 50.00 331.39 Tm (MindPulse AI is engineered strictly for computational linguistics and academic research. It NEVER) Tj ET
+BT /F3 8.5 Tf 0.280 0.220 0.180 rg 1 0 0 1 50.00 319.39 Tm (provides clinical diagnoses, psychiatric evaluations, or therapeutic advice. It distinguishes between) Tj ET
+BT /F3 8.5 Tf 0.280 0.220 0.180 rg 1 0 0 1 50.00 307.39 Tm (observations and diagnoses, and provides immediate one-click routing to verified 24/7 crisis support) Tj ET
+BT /F3 8.5 Tf 0.280 0.220 0.180 rg 1 0 0 1 50.00 295.39 Tm (lines \(e.g. 988 Suicide & Crisis Lifeline\).) Tj ET
+BT /F1 7.8 Tf 0.45 0.5 0.55 rg 1 0 0 1 40.00 24.00 Tm (MindPulse AI Software Engineering Dossier | Academic Submission | Page 1 of 5) Tj ET
+0.85 0.88 0.92 RG 0.5 w 40.00 32.00 m 555.28 32.00 l S
+
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Contents 6 0 R /Resources << /Font << /F1 13 0 R /F2 14 0 R /F3 15 0 R /F4 16 0 R /F5 17 0 R >> >> >>
+endobj
+6 0 obj
+<< /Length 8265 >>
+stream
+BT /F3 8.0 Tf 0.400 0.450 0.500 rg 1 0 0 1 40.00 809.89 Tm (MindPulse AI -- Software Engineering Lab & Project Notebook) Tj ET
+0.850 0.880 0.900 RG 0.5 w 40.00 805.89 m 555.28 805.89 l S
+0.930 0.950 0.980 rg 0.780 0.840 0.920 RG 0.8 w 40.00 765.89 515.28 22.00 re B
+0.120 0.320 0.700 rg 40.00 765.89 4.50 22.00 re f
+BT /F2 11 Tf 0.080 0.180 0.420 rg 1 0 0 1 50.00 771.89 Tm (2. Level 1 Data Flow Diagram \(DFD\)) Tj ET
+BT /F1 8.8 Tf 0.180 0.220 0.260 rg 1 0 0 1 40.00 757.89 Tm (The Level 1 Data Flow Diagram decomposes MindPulse AI into its major internal subprocesses, detailing how) Tj ET
+BT /F1 8.8 Tf 0.180 0.220 0.260 rg 1 0 0 1 40.00 745.39 Tm (data flows between the researcher, internal transformation steps, persistent storage, and external AI models.) Tj ET
+0.960 0.970 0.980 rg 0.820 0.850 0.890 RG 0.8 w 40.00 327.89 515.28 402.00 re B
+BT /F2 8 Tf 0.200 0.280 0.380 rg 1 0 0 1 48.00 718.89 Tm (Architecture Data Flow Schema \(Level 1\)) Tj ET
+0.850 0.880 0.900 RG 0.5 w 46.00 715.89 m 549.28 715.89 l S
+BT /F4 7.8 Tf 0.150 0.200 0.250 rg 1 0 0 1 48.00 707.89 Tm (+-----------------------------------------------------------------------------------------+) Tj ET
+BT /F4 7.8 Tf 0.150 0.200 0.250 rg 1 0 0 1 48.00 697.39 Tm (|                              LEVEL 1 DATA FLOW DIAGRAM                                  |) Tj ET
+BT /F4 7.8 Tf 0.150 0.200 0.250 rg 1 0 0 1 48.00 686.89 Tm (+-----------------------------------------------------------------------------------------+) Tj ET
+BT /F4 7.8 Tf 0.150 0.200 0.250 rg 1 0 0 1 48.00 676.39 Tm (                                                                                           ) Tj ET
+BT /F4 7.8 Tf 0.150 0.200 0.250 rg 1 0 0 1 48.00 665.89 Tm (                  +----------------------------------------------+                         ) Tj ET
+BT /F4 7.8 Tf 0.150 0.200 0.250 rg 1 0 0 1 48.00 655.39 Tm (                  |            User \(Researcher / Client\)         |                         ) Tj ET
+BT /F4 7.8 Tf 0.150 0.200 0.250 rg 1 0 0 1 48.00 644.89 Tm (                  +----------------------------------------------+                         ) Tj ET
+BT /F4 7.8 Tf 0.150 0.200 0.250 rg 1 0 0 1 48.00 634.39 Tm (                       |                                    ^                              ) Tj ET
+BT /F4 7.8 Tf 0.150 0.200 0.250 rg 1 0 0 1 48.00 623.89 Tm (         1. Raw Post   |                                    | 8. Formatted Result Card     ) Tj ET
+BT /F4 7.8 Tf 0.150 0.200 0.250 rg 1 0 0 1 48.00 613.39 Tm (            or Batch   v                                    |    & Verbatim Proof          ) Tj ET
+BT /F4 7.8 Tf 0.150 0.200 0.250 rg 1 0 0 1 48.00 602.89 Tm (         +-------------------------------+                  |                              ) Tj ET
+BT /F4 7.8 Tf 0.150 0.200 0.250 rg 1 0 0 1 48.00 592.39 Tm (         | 1.0 Ingestion & Sanitization  |                  |                              ) Tj ET
+BT /F4 7.8 Tf 0.150 0.200 0.250 rg 1 0 0 1 48.00 581.89 Tm (         +-------------------------------+                  |                              ) Tj ET
+BT /F4 7.8 Tf 0.150 0.200 0.250 rg 1 0 0 1 48.00 571.39 Tm (                       |                                    |                              ) Tj ET
+BT /F4 7.8 Tf 0.150 0.200 0.250 rg 1 0 0 1 48.00 560.89 Tm (         2. Cleaned    |                                    |                              ) Tj ET
+BT /F4 7.8 Tf 0.150 0.200 0.250 rg 1 0 0 1 48.00 550.39 Tm (            Text Data  v                                    |                              ) Tj ET
+BT /F4 7.8 Tf 0.150 0.200 0.250 rg 1 0 0 1 48.00 539.89 Tm (         +-------------------------------+      3. Vector   |   +-----------------------+  ) Tj ET
+BT /F4 7.8 Tf 0.150 0.200 0.250 rg 1 0 0 1 48.00 529.39 Tm (         | 2.0 Semantic Retrieval Engine | <=============> ===> | D1: ChromaDB Vectors  |  ) Tj ET
+BT /F4 7.8 Tf 0.150 0.200 0.250 rg 1 0 0 1 48.00 518.89 Tm (         |     \(LangChain RAG\)           |      Similarity  |   |     \(rag_db store\)    |  ) Tj ET
+BT /F4 7.8 Tf 0.150 0.200 0.250 rg 1 0 0 1 48.00 508.39 Tm (         +-------------------------------+      Search      |   +-----------------------+  ) Tj ET
+BT /F4 7.8 Tf 0.150 0.200 0.250 rg 1 0 0 1 48.00 497.89 Tm (                       |                                    |                              ) Tj ET
+BT /F4 7.8 Tf 0.150 0.200 0.250 rg 1 0 0 1 48.00 487.39 Tm (         4. Post Text  |                                    |                              ) Tj ET
+BT /F4 7.8 Tf 0.150 0.200 0.250 rg 1 0 0 1 48.00 476.89 Tm (          + Guidelines v                                    |                              ) Tj ET
+BT /F4 7.8 Tf 0.150 0.200 0.250 rg 1 0 0 1 48.00 466.39 Tm (         +-------------------------------+   5. Prompt &    |   +-----------------------+  ) Tj ET
+BT /F4 7.8 Tf 0.150 0.200 0.250 rg 1 0 0 1 48.00 455.89 Tm (         | 3.0 Structured LLM Inference  | <=============> ===> | External OpenAI API   |  ) Tj ET
+BT /F4 7.8 Tf 0.150 0.200 0.250 rg 1 0 0 1 48.00 445.39 Tm (         |     \(gpt-4o-mini, T=0.0\)      |      JSON Schema |   | \(gpt-4o-mini engine\)  |  ) Tj ET
+BT /F4 7.8 Tf 0.150 0.200 0.250 rg 1 0 0 1 48.00 434.89 Tm (         +-------------------------------+                  |   +-----------------------+  ) Tj ET
+BT /F4 7.8 Tf 0.150 0.200 0.250 rg 1 0 0 1 48.00 424.39 Tm (                       |                                    |                              ) Tj ET
+BT /F4 7.8 Tf 0.150 0.200 0.250 rg 1 0 0 1 48.00 413.89 Tm (         6. Validated  |                                    |                              ) Tj ET
+BT /F4 7.8 Tf 0.150 0.200 0.250 rg 1 0 0 1 48.00 403.39 Tm (            Prediction v                                    |                              ) Tj ET
+BT /F4 7.8 Tf 0.150 0.200 0.250 rg 1 0 0 1 48.00 392.89 Tm (         +-------------------------------+   7. Append /    |   +-----------------------+  ) Tj ET
+BT /F4 7.8 Tf 0.150 0.200 0.250 rg 1 0 0 1 48.00 382.39 Tm (         | 4.0 Response Formatting &     | <=============> ===> | D2: Session History   |  ) Tj ET
+BT /F4 7.8 Tf 0.150 0.200 0.250 rg 1 0 0 1 48.00 371.89 Tm (         |     Session Persistence       |      Read        |   |     \(In-Memory RAM\)   |  ) Tj ET
+BT /F4 7.8 Tf 0.150 0.200 0.250 rg 1 0 0 1 48.00 361.39 Tm (         +-------------------------------+                  |   +-----------------------+  ) Tj ET
+BT /F4 7.8 Tf 0.150 0.200 0.250 rg 1 0 0 1 48.00 350.89 Tm (                       |                                    |                              ) Tj ET
+BT /F4 7.8 Tf 0.150 0.200 0.250 rg 1 0 0 1 48.00 340.39 Tm (                       +------------------------------------+) Tj ET
+BT /F2 10 Tf 0.140 0.180 0.280 rg 1 0 0 1 40.00 317.89 Tm (Detailed Process Breakdown) Tj ET
+0.250 0.450 0.750 RG 0.8 w 40.00 315.39 m 160.00 315.39 l S
+BT /F1 8.6 Tf 0.180 0.220 0.260 rg 1 0 0 1 40.00 305.89 Tm (- Process 1.0 \(Ingestion & Sanitization\): Validates character limits \(min 3 chars, max 10k\), strips non-text) Tj ET
+BT /F1 8.6 Tf 0.180 0.220 0.260 rg 1 0 0 1 40.00 293.89 Tm (artifacts, and formats request payloads.) Tj ET
+BT /F1 8.6 Tf 0.180 0.220 0.260 rg 1 0 0 1 40.00 278.89 Tm (- Process 2.0 \(Semantic Retrieval Engine\): Generates text embeddings via OpenAI, performs similarity cosine) Tj ET
+BT /F1 8.6 Tf 0.180 0.220 0.260 rg 1 0 0 1 40.00 266.89 Tm (search in ChromaDB, and extracts top-k \(3\) guideline chunks.) Tj ET
+BT /F1 8.6 Tf 0.180 0.220 0.260 rg 1 0 0 1 40.00 251.89 Tm (- Process 3.0 \(Structured LLM Inference\): Injects retrieved guidelines and post into a deterministic prompt) Tj ET
+BT /F1 8.6 Tf 0.180 0.220 0.260 rg 1 0 0 1 40.00 239.89 Tm (\(T=0.0\) and validates output against Pydantic schema.) Tj ET
+BT /F1 8.6 Tf 0.180 0.220 0.260 rg 1 0 0 1 40.00 224.89 Tm (- Process 4.0 \(Response Formatting & History\): Appends the timestamped analysis into volatile history D2,) Tj ET
+BT /F1 8.6 Tf 0.180 0.220 0.260 rg 1 0 0 1 40.00 212.89 Tm (computes confidence scores, and renders the result card.) Tj ET
+BT /F1 7.8 Tf 0.45 0.5 0.55 rg 1 0 0 1 40.00 24.00 Tm (MindPulse AI Software Engineering Dossier | Academic Submission | Page 2 of 5) Tj ET
+0.85 0.88 0.92 RG 0.5 w 40.00 32.00 m 555.28 32.00 l S
+
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Contents 8 0 R /Resources << /Font << /F1 13 0 R /F2 14 0 R /F3 15 0 R /F4 16 0 R /F5 17 0 R >> >> >>
+endobj
+8 0 obj
+<< /Length 7525 >>
+stream
+BT /F3 8.0 Tf 0.400 0.450 0.500 rg 1 0 0 1 40.00 809.89 Tm (MindPulse AI -- Software Engineering Lab & Project Notebook) Tj ET
+0.850 0.880 0.900 RG 0.5 w 40.00 805.89 m 555.28 805.89 l S
+0.930 0.950 0.980 rg 0.780 0.840 0.920 RG 0.8 w 40.00 765.89 515.28 22.00 re B
+0.120 0.320 0.700 rg 40.00 765.89 4.50 22.00 re f
+BT /F2 11 Tf 0.080 0.180 0.420 rg 1 0 0 1 50.00 771.89 Tm (3. Function Point Counting \(FPC / FPA\)) Tj ET
+BT /F1 8.8 Tf 0.180 0.220 0.260 rg 1 0 0 1 40.00 757.89 Tm (Function Point Analysis \(IFPUG standard\) measures the functional size of software based on user-requested) Tj ET
+BT /F1 8.8 Tf 0.180 0.220 0.260 rg 1 0 0 1 40.00 745.39 Tm (deliverables, making it completely independent of programming language syntax.) Tj ET
+BT /F2 10 Tf 0.140 0.180 0.280 rg 1 0 0 1 40.00 725.89 Tm (Unadjusted Function Point \(UFP\) Breakdown) Tj ET
+0.250 0.450 0.750 RG 0.8 w 40.00 723.39 m 160.00 723.39 l S
+0.140 0.220 0.380 rg 0.100 0.160 0.280 RG 0.8 w 40.00 699.39 515.28 14.50 re B
+BT /F2 8.0 Tf 1.000 1.000 1.000 rg 1 0 0 1 45.00 703.39 Tm (Functional Component) Tj ET
+BT /F2 8.0 Tf 1.000 1.000 1.000 rg 1 0 0 1 176.56 703.39 Tm (Count) Tj ET
+BT /F2 8.0 Tf 1.000 1.000 1.000 rg 1 0 0 1 209.45 703.39 Tm (Classification Level) Tj ET
+BT /F2 8.0 Tf 1.000 1.000 1.000 rg 1 0 0 1 428.72 703.39 Tm (Weight) Tj ET
+BT /F2 8.0 Tf 1.000 1.000 1.000 rg 1 0 0 1 494.50 703.39 Tm (Subtotal FP) Tj ET
+1.000 1.000 1.000 rg 0.850 0.880 0.920 RG 0.5 w 40.00 684.89 515.28 14.50 re B
+BT /F2 7.8 Tf 0.080 0.150 0.250 rg 1 0 0 1 45.00 688.89 Tm (External Inputs \(EI\)) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 176.56 688.89 Tm (4) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 209.45 688.89 Tm (Single post, batch, clear history, presets) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 428.72 688.89 Tm (4 \(Avg\)) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 494.50 688.89 Tm (16 FP) Tj ET
+0.970 0.980 1.000 rg 0.850 0.880 0.920 RG 0.5 w 40.00 670.39 515.28 14.50 re B
+BT /F2 7.8 Tf 0.080 0.150 0.250 rg 1 0 0 1 45.00 674.39 Tm (External Outputs \(EO\)) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 176.56 674.39 Tm (3) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 209.45 674.39 Tm (Analysis card, batch aggregate graph, JSON export) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 428.72 674.39 Tm (6 \(Avg/High\)) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 494.50 674.39 Tm (18 FP) Tj ET
+1.000 1.000 1.000 rg 0.850 0.880 0.920 RG 0.5 w 40.00 655.89 515.28 14.50 re B
+BT /F2 7.8 Tf 0.080 0.150 0.250 rg 1 0 0 1 45.00 659.89 Tm (External Inquiries \(EQ\)) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 176.56 659.89 Tm (5) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 209.45 659.89 Tm (Health, categories, presets, KB telemetry, history) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 428.72 659.89 Tm (3 \(Low\)) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 494.50 659.89 Tm (15 FP) Tj ET
+0.970 0.980 1.000 rg 0.850 0.880 0.920 RG 0.5 w 40.00 641.39 515.28 14.50 re B
+BT /F2 7.8 Tf 0.080 0.150 0.250 rg 1 0 0 1 45.00 645.39 Tm (Internal Logical Files \(ILF\)) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 176.56 645.39 Tm (2) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 209.45 645.39 Tm (ChromaDB vector collection, session history buffer) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 428.72 645.39 Tm (12 \(High\)) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 494.50 645.39 Tm (24 FP) Tj ET
+1.000 1.000 1.000 rg 0.850 0.880 0.920 RG 0.5 w 40.00 626.89 515.28 14.50 re B
+BT /F2 7.8 Tf 0.080 0.150 0.250 rg 1 0 0 1 45.00 630.89 Tm (External Interface Files \(EIF\)) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 176.56 630.89 Tm (2) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 209.45 630.89 Tm (OpenAI Embeddings API, OpenAI Chat API) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 428.72 630.89 Tm (9 \(High\)) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 494.50 630.89 Tm (18 FP) Tj ET
+0.970 0.980 1.000 rg 0.850 0.880 0.920 RG 0.5 w 40.00 612.39 515.28 14.50 re B
+BT /F2 7.8 Tf 0.080 0.150 0.250 rg 1 0 0 1 45.00 616.39 Tm (Total Unadjusted FP \(UFP\)) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 176.56 616.39 Tm (16) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 209.45 616.39 Tm (Complete System Functionality Scope) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 428.72 616.39 Tm (--) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 494.50 616.39 Tm (91 FP) Tj ET
+BT /F2 10 Tf 0.140 0.180 0.280 rg 1 0 0 1 40.00 600.39 Tm (Value Adjustment Factor \(VAF\) & Final Sizing) Tj ET
+0.250 0.450 0.750 RG 0.8 w 40.00 597.89 m 160.00 597.89 l S
+BT /F1 8.8 Tf 0.180 0.220 0.260 rg 1 0 0 1 40.00 588.39 Tm (The 14 General System Characteristics \(GSCs\) evaluate data communications, performance, end-user efficiency,) Tj ET
+BT /F1 8.8 Tf 0.180 0.220 0.260 rg 1 0 0 1 40.00 575.89 Tm (and reusability on a scale from 0 to 5. Sum of influence scores = 49.) Tj ET
+BT /F1 8.6 Tf 0.180 0.220 0.260 rg 1 0 0 1 40.00 560.39 Tm (- Formula: VAF = 0.65 + \(0.01 x Sum of GSC\) = 0.65 + \(0.01 x 49\) = 1.14) Tj ET
+BT /F1 8.6 Tf 0.180 0.220 0.260 rg 1 0 0 1 40.00 545.39 Tm (- Adjusted Function Points \(AFP\): AFP = UFP x VAF = 91 x 1.14 = 103.74 FP \(~104 to 106 FP\)) Tj ET
+BT /F1 8.6 Tf 0.180 0.220 0.260 rg 1 0 0 1 40.00 530.39 Tm (- LOC Backfiring Estimate: Using industry average of 45 LOC/FP for Python + React: Size = 104 x 45 = 4,680) Tj ET
+BT /F1 8.6 Tf 0.180 0.220 0.260 rg 1 0 0 1 40.00 518.39 Tm (LOC \(~4.68 KLOC\).) Tj ET
+0.930 0.950 0.980 rg 0.780 0.840 0.920 RG 0.8 w 40.00 473.39 515.28 22.00 re B
+0.120 0.320 0.700 rg 40.00 473.39 4.50 22.00 re f
+BT /F2 11 Tf 0.080 0.180 0.420 rg 1 0 0 1 50.00 479.39 Tm (4. COCOMO Cost & Effort Estimation) Tj ET
+BT /F1 8.8 Tf 0.180 0.220 0.260 rg 1 0 0 1 40.00 465.39 Tm (Constructive Cost Model \(COCOMO\) provides an empirical algorithmic method to forecast engineering effort,) Tj ET
+BT /F1 8.8 Tf 0.180 0.220 0.260 rg 1 0 0 1 40.00 452.89 Tm (project schedule duration, staffing allocation, and total development expenditures.) Tj ET
+BT /F2 10 Tf 0.140 0.180 0.280 rg 1 0 0 1 40.00 433.39 Tm (Basic COCOMO Formulae \(Organic Mode\)) Tj ET
+0.250 0.450 0.750 RG 0.8 w 40.00 430.89 m 160.00 430.89 l S
+BT /F1 8.6 Tf 0.180 0.220 0.260 rg 1 0 0 1 40.00 421.39 Tm (- Project Classification: Organic Mode \(small team <= 4 developers, familiar NLP domain, flexible deadlines\).) Tj ET
+BT /F1 8.6 Tf 0.180 0.220 0.260 rg 1 0 0 1 40.00 406.39 Tm (- Input Size \(KLOC\): 4.5 KLOC \(thousands of source lines of code\). Constants: a=2.4, b=1.05, c=2.5, d=0.38.) Tj ET
+BT /F1 8.6 Tf 0.180 0.220 0.260 rg 1 0 0 1 40.00 391.39 Tm (- 1. Effort \(E\): E = a x \(KLOC\)^b = 2.4 x \(4.5\)^1.05 = 2.4 x 4.85 = 11.64 Person-Months.) Tj ET
+BT /F1 8.6 Tf 0.180 0.220 0.260 rg 1 0 0 1 40.00 376.39 Tm (- 2. Development Time \(D\): D = c x \(E\)^d = 2.5 x \(11.64\)^0.38 = 2.5 x 2.54 = 6.35 Calendar Months.) Tj ET
+BT /F1 8.6 Tf 0.180 0.220 0.260 rg 1 0 0 1 40.00 361.39 Tm (- 3. Team Sizing \(S\): S = E / D = 11.64 / 6.35 = 1.83 -> Approx 2 Full-Time Developers.) Tj ET
+BT /F1 8.6 Tf 0.180 0.220 0.260 rg 1 0 0 1 40.00 346.39 Tm (- 4. Cost Estimation: At a standard rate of $4,000 / PM \(Rs. 1,00,000/PM\): Total Cost = 11.64 x $4,000 =) Tj ET
+BT /F1 8.6 Tf 0.180 0.220 0.260 rg 1 0 0 1 40.00 334.39 Tm ($46,560 USD.) Tj ET
+BT /F1 7.8 Tf 0.45 0.5 0.55 rg 1 0 0 1 40.00 24.00 Tm (MindPulse AI Software Engineering Dossier | Academic Submission | Page 3 of 5) Tj ET
+0.85 0.88 0.92 RG 0.5 w 40.00 32.00 m 555.28 32.00 l S
+
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Contents 10 0 R /Resources << /Font << /F1 13 0 R /F2 14 0 R /F3 15 0 R /F4 16 0 R /F5 17 0 R >> >> >>
+endobj
+10 0 obj
+<< /Length 11770 >>
+stream
+BT /F3 8.0 Tf 0.400 0.450 0.500 rg 1 0 0 1 40.00 809.89 Tm (MindPulse AI -- Software Engineering Lab & Project Notebook) Tj ET
+0.850 0.880 0.900 RG 0.5 w 40.00 805.89 m 555.28 805.89 l S
+0.930 0.950 0.980 rg 0.780 0.840 0.920 RG 0.8 w 40.00 765.89 515.28 22.00 re B
+0.120 0.320 0.700 rg 40.00 765.89 4.50 22.00 re f
+BT /F2 11 Tf 0.080 0.180 0.420 rg 1 0 0 1 50.00 771.89 Tm (5. Critical Path Method \(CPM\) Project Schedule) Tj ET
+BT /F1 8.8 Tf 0.180 0.220 0.260 rg 1 0 0 1 40.00 757.89 Tm (CPM identifies the longest sequence of dependent activities and calculates the minimum project completion) Tj ET
+BT /F1 8.8 Tf 0.180 0.220 0.260 rg 1 0 0 1 40.00 745.39 Tm (time. Tasks with zero slack \(Float = 0\) form the Critical Path; any delay in these tasks delays the entire) Tj ET
+BT /F1 8.8 Tf 0.180 0.220 0.260 rg 1 0 0 1 40.00 732.89 Tm (project.) Tj ET
+0.140 0.220 0.380 rg 0.100 0.160 0.280 RG 0.8 w 40.00 702.89 515.28 14.50 re B
+BT /F2 8.0 Tf 1.000 1.000 1.000 rg 1 0 0 1 45.00 706.89 Tm (ID) Tj ET
+BT /F2 8.0 Tf 1.000 1.000 1.000 rg 1 0 0 1 71.55 706.89 Tm (Task Description) Tj ET
+BT /F2 8.0 Tf 1.000 1.000 1.000 rg 1 0 0 1 276.69 706.89 Tm (Predecessors) Tj ET
+BT /F2 8.0 Tf 1.000 1.000 1.000 rg 1 0 0 1 337.03 706.89 Tm (Days) Tj ET
+BT /F2 8.0 Tf 1.000 1.000 1.000 rg 1 0 0 1 368.41 706.89 Tm (ES) Tj ET
+BT /F2 8.0 Tf 1.000 1.000 1.000 rg 1 0 0 1 394.96 706.89 Tm (EF) Tj ET
+BT /F2 8.0 Tf 1.000 1.000 1.000 rg 1 0 0 1 421.50 706.89 Tm (LS) Tj ET
+BT /F2 8.0 Tf 1.000 1.000 1.000 rg 1 0 0 1 448.05 706.89 Tm (LF) Tj ET
+BT /F2 8.0 Tf 1.000 1.000 1.000 rg 1 0 0 1 474.60 706.89 Tm (Slack) Tj ET
+BT /F2 8.0 Tf 1.000 1.000 1.000 rg 1 0 0 1 505.98 706.89 Tm (Critical?) Tj ET
+1.000 1.000 1.000 rg 0.850 0.880 0.920 RG 0.5 w 40.00 688.39 515.28 14.50 re B
+BT /F2 7.8 Tf 0.080 0.150 0.250 rg 1 0 0 1 45.00 692.39 Tm (A) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 71.55 692.39 Tm (Requirements & Taxonomy Formulation) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 276.69 692.39 Tm (None) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 337.03 692.39 Tm (5) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 368.41 692.39 Tm (0) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 394.96 692.39 Tm (5) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 421.50 692.39 Tm (0) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 448.05 692.39 Tm (5) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 474.60 692.39 Tm (0) Tj ET
+BT /F2 7.8 Tf 0.750 0.150 0.150 rg 1 0 0 1 505.98 692.39 Tm (YES) Tj ET
+0.970 0.980 1.000 rg 0.850 0.880 0.920 RG 0.5 w 40.00 673.89 515.28 14.50 re B
+BT /F2 7.8 Tf 0.080 0.150 0.250 rg 1 0 0 1 45.00 677.89 Tm (B) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 71.55 677.89 Tm (ChromaDB Guidelines & Vector Setup) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 276.69 677.89 Tm (A) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 337.03 677.89 Tm (6) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 368.41 677.89 Tm (5) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 394.96 677.89 Tm (11) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 421.50 677.89 Tm (5) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 448.05 677.89 Tm (11) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 474.60 677.89 Tm (0) Tj ET
+BT /F2 7.8 Tf 0.750 0.150 0.150 rg 1 0 0 1 505.98 677.89 Tm (YES) Tj ET
+1.000 1.000 1.000 rg 0.850 0.880 0.920 RG 0.5 w 40.00 659.39 515.28 14.50 re B
+BT /F2 7.8 Tf 0.080 0.150 0.250 rg 1 0 0 1 45.00 663.39 Tm (C) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 71.55 663.39 Tm (Backend FastAPI Architecture & Endpoints) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 276.69 663.39 Tm (A) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 337.03 663.39 Tm (5) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 368.41 663.39 Tm (5) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 394.96 663.39 Tm (10) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 421.50 663.39 Tm (6) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 448.05 663.39 Tm (11) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 474.60 663.39 Tm (1) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 505.98 663.39 Tm (No) Tj ET
+0.970 0.980 1.000 rg 0.850 0.880 0.920 RG 0.5 w 40.00 644.89 515.28 14.50 re B
+BT /F2 7.8 Tf 0.080 0.150 0.250 rg 1 0 0 1 45.00 648.89 Tm (D) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 71.55 648.89 Tm (RAG Pipeline & Structured LLM Engine) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 276.69 648.89 Tm (B, C) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 337.03 648.89 Tm (8) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 368.41 648.89 Tm (11) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 394.96 648.89 Tm (19) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 421.50 648.89 Tm (11) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 448.05 648.89 Tm (19) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 474.60 648.89 Tm (0) Tj ET
+BT /F2 7.8 Tf 0.750 0.150 0.150 rg 1 0 0 1 505.98 648.89 Tm (YES) Tj ET
+1.000 1.000 1.000 rg 0.850 0.880 0.920 RG 0.5 w 40.00 630.39 515.28 14.50 re B
+BT /F2 7.8 Tf 0.080 0.150 0.250 rg 1 0 0 1 45.00 634.39 Tm (E) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 71.55 634.39 Tm (Frontend React UI & Glassmorphism CSS) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 276.69 634.39 Tm (A) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 337.03 634.39 Tm (6) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 368.41 634.39 Tm (5) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 394.96 634.39 Tm (11) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 421.50 634.39 Tm (9) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 448.05 634.39 Tm (15) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 474.60 634.39 Tm (4) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 505.98 634.39 Tm (No) Tj ET
+0.970 0.980 1.000 rg 0.850 0.880 0.920 RG 0.5 w 40.00 615.89 515.28 14.50 re B
+BT /F2 7.8 Tf 0.080 0.150 0.250 rg 1 0 0 1 45.00 619.89 Tm (F) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 71.55 619.89 Tm (Connect UI with API Client & Proxy) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 276.69 619.89 Tm (D, E) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 337.03 619.89 Tm (4) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 368.41 619.89 Tm (19) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 394.96 619.89 Tm (23) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 421.50 619.89 Tm (19) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 448.05 619.89 Tm (23) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 474.60 619.89 Tm (0) Tj ET
+BT /F2 7.8 Tf 0.750 0.150 0.150 rg 1 0 0 1 505.98 619.89 Tm (YES) Tj ET
+1.000 1.000 1.000 rg 0.850 0.880 0.920 RG 0.5 w 40.00 601.39 515.28 14.50 re B
+BT /F2 7.8 Tf 0.080 0.150 0.250 rg 1 0 0 1 45.00 605.39 Tm (G) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 71.55 605.39 Tm (End-to-End System Testing & Bug Fixes) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 276.69 605.39 Tm (F) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 337.03 605.39 Tm (5) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 368.41 605.39 Tm (23) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 394.96 605.39 Tm (28) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 421.50 605.39 Tm (23) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 448.05 605.39 Tm (28) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 474.60 605.39 Tm (0) Tj ET
+BT /F2 7.8 Tf 0.750 0.150 0.150 rg 1 0 0 1 505.98 605.39 Tm (YES) Tj ET
+0.970 0.980 1.000 rg 0.850 0.880 0.920 RG 0.5 w 40.00 586.89 515.28 14.50 re B
+BT /F2 7.8 Tf 0.080 0.150 0.250 rg 1 0 0 1 45.00 590.89 Tm (H) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 71.55 590.89 Tm (Final Academic Documentation & Polish) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 276.69 590.89 Tm (G) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 337.03 590.89 Tm (3) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 368.41 590.89 Tm (28) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 394.96 590.89 Tm (31) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 421.50 590.89 Tm (28) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 448.05 590.89 Tm (31) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 474.60 590.89 Tm (0) Tj ET
+BT /F2 7.8 Tf 0.750 0.150 0.150 rg 1 0 0 1 505.98 590.89 Tm (YES) Tj ET
+0.990 0.980 0.930 rg 0.850 0.550 0.150 RG 0.8 w 40.00 534.89 515.28 44.00 re B
+0.850 0.550 0.150 rg 40.00 534.89 3.50 44.00 re f
+BT /F2 9 Tf 0.420 0.220 0.050 rg 1 0 0 1 50.00 565.89 Tm (CRITICAL PATH OUTCOME) Tj ET
+BT /F3 8.5 Tf 0.280 0.220 0.180 rg 1 0 0 1 50.00 554.89 Tm (CRITICAL PATH: A -> B -> D -> F -> G -> H Total Project Schedule: 5 + 6 + 8 + 4 + 5 + 3 = 31 Working) Tj ET
+BT /F3 8.5 Tf 0.280 0.220 0.180 rg 1 0 0 1 50.00 542.89 Tm (Days \(~6.2 Weeks\).) Tj ET
+0.930 0.950 0.980 rg 0.780 0.840 0.920 RG 0.8 w 40.00 498.89 515.28 22.00 re B
+0.120 0.320 0.700 rg 40.00 498.89 4.50 22.00 re f
+BT /F2 11 Tf 0.080 0.180 0.420 rg 1 0 0 1 50.00 504.89 Tm (6. Agile User Stories & Acceptance Criteria) Tj ET
+BT /F1 8.8 Tf 0.180 0.220 0.260 rg 1 0 0 1 40.00 490.89 Tm (User stories written following the INVEST criteria with Given-When-Then acceptance tests:) Tj ET
+BT /F1 8.6 Tf 0.180 0.220 0.260 rg 1 0 0 1 40.00 475.39 Tm (- US-01: Single Post Analysis \(Points: 5 | Priority: Must Have\): As an NLP researcher, I want to input social) Tj ET
+BT /F1 8.6 Tf 0.180 0.220 0.260 rg 1 0 0 1 40.00 463.39 Tm (text and click Analyze, so that I can classify distress and extract verbatim proof without subjective) Tj ET
+BT /F1 8.6 Tf 0.180 0.220 0.260 rg 1 0 0 1 40.00 451.39 Tm (extrapolation. Acceptance: Returns category, confidence score, and highlighted exact quotes.) Tj ET
+BT /F1 8.6 Tf 0.180 0.220 0.260 rg 1 0 0 1 40.00 436.39 Tm (- US-02: Batch Processing \(Points: 8 | Priority: Must Have\): As a data scientist, I want to paste up to 25) Tj ET
+BT /F1 8.6 Tf 0.180 0.220 0.260 rg 1 0 0 1 40.00 424.39 Tm (posts simultaneously, so that I can evaluate entire datasets and examine aggregated category distribution) Tj ET
+BT /F1 8.6 Tf 0.180 0.220 0.260 rg 1 0 0 1 40.00 412.39 Tm (bars. Acceptance: Processes all items and renders distribution percentages.) Tj ET
+BT /F1 8.6 Tf 0.180 0.220 0.260 rg 1 0 0 1 40.00 397.39 Tm (- US-03: Crisis Helpline Modal \(Points: 2 | Priority: Must Have\): As a user experiencing acute distress, I) Tj ET
+BT /F1 8.6 Tf 0.180 0.220 0.260 rg 1 0 0 1 40.00 385.39 Tm (want one-click access to verified crisis hotlines, so that I can reach emergency help immediately.) Tj ET
+BT /F1 8.6 Tf 0.180 0.220 0.260 rg 1 0 0 1 40.00 373.39 Tm (Acceptance: Opens modal with 988, 111, and crisis text numbers with clickable dialing triggers.) Tj ET
+BT /F1 8.6 Tf 0.180 0.220 0.260 rg 1 0 0 1 40.00 358.39 Tm (- US-04: Preset Benchmark Chips \(Points: 2 | Priority: Should Have\): As an evaluator, I want clickable sample) Tj ET
+BT /F1 8.6 Tf 0.180 0.220 0.260 rg 1 0 0 1 40.00 346.39 Tm (buttons for each category, so that I can instantly verify model accuracy without typing custom posts.) Tj ET
+BT /F1 8.6 Tf 0.180 0.220 0.260 rg 1 0 0 1 40.00 334.39 Tm (Acceptance: Clicking preset fills textarea and recalculates word/char metrics.) Tj ET
+BT /F1 8.6 Tf 0.180 0.220 0.260 rg 1 0 0 1 40.00 319.39 Tm (- US-05: Session History & JSON Export \(Points: 3 | Priority: Should Have\): As an academic researcher, I want) Tj ET
+BT /F1 8.6 Tf 0.180 0.220 0.260 rg 1 0 0 1 40.00 307.39 Tm (to download my analysis history as JSON, so that I can archive findings in my lab notebook. Acceptance:) Tj ET
+BT /F1 8.6 Tf 0.180 0.220 0.260 rg 1 0 0 1 40.00 295.39 Tm (Downloads mindpulse_analysis_history.json with all session metadata.) Tj ET
+BT /F1 7.8 Tf 0.45 0.5 0.55 rg 1 0 0 1 40.00 24.00 Tm (MindPulse AI Software Engineering Dossier | Academic Submission | Page 4 of 5) Tj ET
+0.85 0.88 0.92 RG 0.5 w 40.00 32.00 m 555.28 32.00 l S
+
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Contents 12 0 R /Resources << /Font << /F1 13 0 R /F2 14 0 R /F3 15 0 R /F4 16 0 R /F5 17 0 R >> >> >>
+endobj
+12 0 obj
+<< /Length 3904 >>
+stream
+BT /F3 8.0 Tf 0.400 0.450 0.500 rg 1 0 0 1 40.00 809.89 Tm (MindPulse AI -- Software Engineering Lab & Project Notebook) Tj ET
+0.850 0.880 0.900 RG 0.5 w 40.00 805.89 m 555.28 805.89 l S
+0.930 0.950 0.980 rg 0.780 0.840 0.920 RG 0.8 w 40.00 765.89 515.28 22.00 re B
+0.120 0.320 0.700 rg 40.00 765.89 4.50 22.00 re f
+BT /F2 11 Tf 0.080 0.180 0.420 rg 1 0 0 1 50.00 771.89 Tm (7. Viva & Exam Quick-Reference Cheat Sheet) Tj ET
+0.140 0.220 0.380 rg 0.100 0.160 0.280 RG 0.8 w 40.00 743.39 515.28 14.50 re B
+BT /F2 8.0 Tf 1.000 1.000 1.000 rg 1 0 0 1 45.00 747.39 Tm (Frequently Asked Viva Question) Tj ET
+BT /F2 8.0 Tf 1.000 1.000 1.000 rg 1 0 0 1 242.34 747.39 Tm (Concise, Technically Accurate Response) Tj ET
+1.000 1.000 1.000 rg 0.850 0.880 0.920 RG 0.5 w 40.00 728.89 515.28 14.50 re B
+BT /F2 7.8 Tf 0.080 0.150 0.250 rg 1 0 0 1 45.00 732.89 Tm (What is the core objective of MindPulse AI?) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 242.34 732.89 Tm (Detect emotional distress in unstructured social media text, classify causes into 6 categories, and extract exact verbatim quotes.) Tj ET
+0.970 0.980 1.000 rg 0.850 0.880 0.920 RG 0.5 w 40.00 714.39 515.28 14.50 re B
+BT /F2 7.8 Tf 0.080 0.150 0.250 rg 1 0 0 1 45.00 718.39 Tm (Why use RAG with ChromaDB instead of raw prompt?) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 242.34 718.39 Tm (ChromaDB provides grounded retrieval of academic guidelines, preventing LLM hallucinations and enforcing deterministic non-clinical outputs.) Tj ET
+1.000 1.000 1.000 rg 0.850 0.880 0.920 RG 0.5 w 40.00 699.89 515.28 14.50 re B
+BT /F2 7.8 Tf 0.080 0.150 0.250 rg 1 0 0 1 45.00 703.89 Tm (What are the 6 research categories?) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 242.34 703.89 Tm (Jobs/Career, Relationship, Bias/Abuse, Medication, Alienation, and No Reason \(used for unspecified distress or neutral text\).) Tj ET
+0.970 0.980 1.000 rg 0.850 0.880 0.920 RG 0.5 w 40.00 685.39 515.28 14.50 re B
+BT /F2 7.8 Tf 0.080 0.150 0.250 rg 1 0 0 1 45.00 689.39 Tm (What is the Function Point \(FP\) count?) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 242.34 689.39 Tm (Unadjusted FP = 91, VAF = 1.14, yielding an Adjusted FP of 104 to 106 FP \(~4,680 LOC equivalent\).) Tj ET
+1.000 1.000 1.000 rg 0.850 0.880 0.920 RG 0.5 w 40.00 670.89 515.28 14.50 re B
+BT /F2 7.8 Tf 0.080 0.150 0.250 rg 1 0 0 1 45.00 674.89 Tm (What does COCOMO tell us about staffing?) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 242.34 674.89 Tm (Organic model estimates 11.64 Person-Months, taking ~6.35 months with a team of 2 developers.) Tj ET
+0.970 0.980 1.000 rg 0.850 0.880 0.920 RG 0.5 w 40.00 656.39 515.28 14.50 re B
+BT /F2 7.8 Tf 0.080 0.150 0.250 rg 1 0 0 1 45.00 660.39 Tm (What is the Critical Path and its total duration?) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 242.34 660.39 Tm (Path: A -> B -> D -> F -> G -> H, taking exactly 31 working days \(~6.2 calendar weeks\).) Tj ET
+1.000 1.000 1.000 rg 0.850 0.880 0.920 RG 0.5 w 40.00 641.89 515.28 14.50 re B
+BT /F2 7.8 Tf 0.080 0.150 0.250 rg 1 0 0 1 45.00 645.89 Tm (How does the app protect user privacy?) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 242.34 645.89 Tm (Post inputs are processed purely in volatile memory for the active session and are NEVER indexed or written into ChromaDB storage.) Tj ET
+0.970 0.980 1.000 rg 0.850 0.880 0.920 RG 0.5 w 40.00 627.39 515.28 14.50 re B
+BT /F2 7.8 Tf 0.080 0.150 0.250 rg 1 0 0 1 45.00 631.39 Tm (Does the system deliver clinical diagnoses?) Tj ET
+BT /F1 7.8 Tf 0.220 0.260 0.320 rg 1 0 0 1 242.34 631.39 Tm (NO. It is strictly a computational linguistics research platform; clinical diagnoses require licensed psychiatric professionals.) Tj ET
+BT /F1 7.8 Tf 0.45 0.5 0.55 rg 1 0 0 1 40.00 24.00 Tm (MindPulse AI Software Engineering Dossier | Academic Submission | Page 5 of 5) Tj ET
+0.85 0.88 0.92 RG 0.5 w 40.00 32.00 m 555.28 32.00 l S
+
+endstream
+endobj
+13 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+14 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+15 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Oblique >>
+endobj
+16 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>
+endobj
+17 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier-Bold >>
+endobj
+xref
+0 18
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000148 00000 n 
+0000000325 00000 n 
+0000005576 00000 n 
+0000005753 00000 n 
+0000014070 00000 n 
+0000014247 00000 n 
+0000021824 00000 n 
+0000022002 00000 n 
+0000033826 00000 n 
+0000034005 00000 n 
+0000037962 00000 n 
+0000038033 00000 n 
+0000038109 00000 n 
+0000038188 00000 n 
+0000038257 00000 n 
+trailer
+<< /Size 18 /Root 1 0 R >>
+startxref
+38331
+%%EOF

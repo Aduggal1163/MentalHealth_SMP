@@ -2,7 +2,7 @@
  * API client for MindPulse Mental Health Analyzer
  */
 
-const API_BASE = import.meta.env.VITE_API_BASE || 'http://127.0.0.1:8000';
+const API_BASE = import.meta.env.VITE_API_BASE ?? '';
 
 async function request(endpoint, options = {}) {
   const url = `${API_BASE}${endpoint}`;
@@ -17,13 +17,19 @@ async function request(endpoint, options = {}) {
   try {
     const response = await fetch(url, config);
     if (!response.ok) {
-      let errorMessage = `HTTP error ${response.status}`;
+      let errorMessage = `HTTP error ${response.status}: Backend service unavailable`;
       try {
-        const errorData = await response.json();
-        errorMessage = errorData.detail || errorData.message || errorMessage;
-      } catch {
         const text = await response.text();
-        if (text) errorMessage = text;
+        if (text) {
+          try {
+            const errorData = JSON.parse(text);
+            errorMessage = errorData.detail || errorData.message || text;
+          } catch {
+            errorMessage = text;
+          }
+        }
+      } catch {
+        // fallback to default errorMessage
       }
       throw new Error(errorMessage);
     }

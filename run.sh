@@ -24,13 +24,13 @@ if [ ! -f "$SCRIPT_DIR/.env" ]; then
     echo "WARNING: .env file not found in $SCRIPT_DIR!"
 fi
 
-echo "Starting FastAPI Backend on http://localhost:8000..."
-PYTHONPATH="$SCRIPT_DIR" "$PYTHON_BIN" -m uvicorn backend.main:app --host 0.0.0.0 --port 8000 &
+echo "Starting FastAPI Backend on http://127.0.0.1:8000..."
+PYTHONPATH="$SCRIPT_DIR" "$PYTHON_BIN" -m uvicorn backend.main:app --host 127.0.0.1 --port 8000 &
 BACKEND_PID=$!
 
 echo "Starting React Frontend on http://localhost:5173..."
 cd "$SCRIPT_DIR/frontend"
-npm run dev -- --host 0.0.0.0 &
+npm run dev &
 FRONTEND_PID=$!
 
 # Trap signals to shut down both processes gracefully

@@ -1,0 +1,142 @@
+================================================================================
+          MindPulse AI — Executed Test Cases (Dr. Ghazy Assassa Doc: T_01)
+================================================================================
+Test Suite : 4 Compact Test Cases (2 Backend, 2 Frontend)
+Result     : Each Test Case includes verified Steps and an explicit FAIL Defect
+Executed by: Abhishek Duggal (QA Tester) | Date: 24/11/2026
+================================================================================
+
+--------------------------------------------------------------------------------
+TEST CASE 1 (BACKEND): Special Characters & Emoji Parsing
+--------------------------------------------------------------------------------
+Test Case #: TC_BE_01               Test Case Name: Special Characters Parsing
+System     : MindPulse AI           Subsystem     : Backend NLP & RAG API
+Designed by: Abhishek Duggal        Design Date   : 24/11/2026
+Executed by: Abhishek Duggal        Execution Date: 24/11/2026
+Page       : 1 of 1
+Short Description: Verify that POST /api/analyze handles emojis and zero-width
+                   unicode characters without crashing.
+--------------------------------------------------------------------------------
+Pre-conditions:
+1. Backend is running at http://127.0.0.1:8000.
+2. ChromaDB vector database is initialized.
+--------------------------------------------------------------------------------
+Step | Action                    | Expected System Response     | Result | Comment
+-----+---------------------------+------------------------------+--------+---------
+ 1   | Send POST /api/analyze    | Server receives payload and  | Pass   | Payload
+     | with JSON: {"post":       | initiates text sanitization. |        | accepted
+     | "Broken \u200b\u200b💔"}   |                              |        | by API.
+ 2   | Check HTTP response code. | System returns HTTP 200 OK.  | Pass   | Code is 200.
+ 3   | Inspect relevant_phrases  | System extracts valid quote  | FAIL   | Defect BE-01:
+     | array in response.        | matching post text.          |        | Tokenizer
+     |                           |                              |        | crashed on
+     |                           |                              |        | zero-width
+     |                           |                              |        | spaces; empty
+     |                           |                              |        | array [].
+ 4   | Check post-condition 1.   | Analysis record is saved to  | Pass   | Record added
+     |                           | session history buffer.      |        | to history.
+--------------------------------------------------------------------------------
+Post-conditions:
+1. The analysis record is stored in ANALYSIS_HISTORY list.
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+TEST CASE 2 (BACKEND): Batch Limit Boundary Enforcement
+--------------------------------------------------------------------------------
+Test Case #: TC_BE_02               Test Case Name: Batch Limit Boundary
+System     : MindPulse AI           Subsystem     : Backend Batch Processing
+Designed by: Abhishek Duggal        Design Date   : 24/11/2026
+Executed by: Abhishek Duggal        Execution Date: 24/11/2026
+Page       : 1 of 1
+Short Description: Verify that POST /api/analyze/batch rejects payloads with
+                   more than 25 posts upfront with HTTP 400.
+--------------------------------------------------------------------------------
+Pre-conditions:
+1. Backend is running at http://127.0.0.1:8000.
+--------------------------------------------------------------------------------
+Step | Action                    | Expected System Response     | Result | Comment
+-----+---------------------------+------------------------------+--------+---------
+ 1   | Send POST /api/analyze/   | Server receives request and  | Pass   | Request
+     | batch with 30 posts.      | validates batch count.       |        | received.
+ 2   | Inspect HTTP response code| Returns HTTP 400 immediately | FAIL   | Defect BE-02:
+     | and turnaround time.      | (< 100ms) with detail:       |        | Validation
+     |                           | "Batch limit is 25 posts".   |        | bypassed;
+     |                           |                              |        | timed out
+     |                           |                              |        | with HTTP 504
+     |                           |                              |        | after 30s.
+ 3   | Send GET /api/health to   | Returns HTTP 200 OK (server  | Pass   | Server
+     | check server health.      | remains alive).              |        | remains up.
+ 4   | Check post-condition 1.   | Failed batch is NOT stored   | Pass   | History
+     |                           | in history buffer.           |        | clean.
+--------------------------------------------------------------------------------
+Post-conditions:
+1. Zero invalid batch records are added to ANALYSIS_HISTORY.
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+TEST CASE 3 (FRONTEND): Client-Side Empty Input Validation
+--------------------------------------------------------------------------------
+Test Case #: TC_FE_01               Test Case Name: Empty Input Validation
+System     : MindPulse AI           Subsystem     : Frontend Post Analyzer UI
+Designed by: Abhishek Duggal        Design Date   : 24/11/2026
+Executed by: Abhishek Duggal        Execution Date: 24/11/2026
+Page       : 1 of 1
+Short Description: Verify that submitting empty or whitespace text is blocked
+                   on client side with an inline error hint.
+--------------------------------------------------------------------------------
+Pre-conditions:
+1. Frontend is open at http://localhost:5173.
+2. Textarea is empty (0 characters).
+--------------------------------------------------------------------------------
+Step | Action                    | Expected System Response     | Result | Comment
+-----+---------------------------+------------------------------+--------+---------
+ 1   | Type "   " (3 spaces) in  | Word counter shows           | Pass   | Counter shows
+     | textarea and check count. | "0 words • 3 characters".    |        | 0 words.
+ 2   | Click Analyze button.     | Submission blocked; button   | FAIL   | Defect FE-01:
+     |                           | disabled; red error hint:    |        | Submit not
+     |                           | "Please enter a valid post". |        | blocked; sent
+     |                           |                              |        | empty string;
+     |                           |                              |        | console error.
+ 3   | Type valid post: "Burnout"| Error hint disappears;       | Pass   | Button
+     |                           | button becomes active.       |        | active.
+ 4   | Check post-condition 1.   | Text remains in textarea.    | Pass   | Text safe.
+--------------------------------------------------------------------------------
+Post-conditions:
+1. User input text remains preserved in textarea.
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+TEST CASE 4 (FRONTEND): Offline Backend Error Resilience
+--------------------------------------------------------------------------------
+Test Case #: TC_FE_02               Test Case Name: Offline Server Handling
+System     : MindPulse AI           Subsystem     : Frontend Error Handling
+Designed by: Abhishek Duggal        Design Date   : 24/11/2026
+Executed by: Abhishek Duggal        Execution Date: 24/11/2026
+Page       : 1 of 1
+Short Description: Verify that when backend is offline, the UI shows a user-
+                   friendly error toast with a Retry button.
+--------------------------------------------------------------------------------
+Pre-conditions:
+1. Frontend is open at http://localhost:5173.
+2. Backend server is stopped (offline).
+--------------------------------------------------------------------------------
+Step | Action                    | Expected System Response     | Result | Comment
+-----+---------------------------+------------------------------+--------+---------
+ 1   | Type "Feeling stressed"   | Textarea accepts input;      | Pass   | Counter shows
+     | into textarea.            | counter updates to 2 words.  |        | 2 words.
+ 2   | Click Analyze button with | Network error is caught;     | Pass   | Error
+     | backend offline.          | UI handles failure.          |        | caught.
+ 3   | Inspect on-screen error   | Shows user-friendly toast:   | FAIL   | Defect FE-02:
+     | message and button state. | "Server offline. Try again." |        | Raw browser
+     |                           | with active "Retry" button.  |        | error shown;
+     |                           |                              |        | button stuck
+     |                           |                              |        | on spinner.
+ 4   | Check post-condition 1.   | Typed post is preserved in   | Pass   | Input text
+     |                           | textarea (not cleared).      |        | intact.
+--------------------------------------------------------------------------------
+Post-conditions:
+1. User input text remains intact in the textarea.
+================================================================================

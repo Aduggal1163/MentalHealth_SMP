@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MindPulse AI — Software Engineering Project Notebook</title>
+  <style>
+    @media print {
+      body {
+        margin: 0;
+        padding: 1.5cm;
+        font-size: 11pt;
+        color: #000;
+        background: #fff;
+      }
+      .no-print {
+        display: none !important;
+      }
+      .page-break {
+        page-break-before: always;
+      }
+      .card {
+        box-shadow: none !important;
+        border: 1px solid #ccc !important;
+      }
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #1e293b;
+      background-color: #f8fafc;
+      margin: 0;
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 3rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      border: 1px solid #e2e8f0;
+    }
+
+    .header-banner {
+      border-bottom: 3px solid #4f46e5;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    h1 {
+      color: #1e1b4b;
+      margin: 0 0 0.5rem 0;
+      font-size: 2.2rem;
+    }
+
+    .subtitle {
+      color: #64748b;
+      font-size: 1.05rem;
+      margin-bottom: 1rem;
+    }
+
+    .meta-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      background: #eef2ff;
+      color: #4338ca;
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    h2 {
+      color: #312e81;
+      border-bottom: 2px solid #e0e7ff;
+      padding-bottom: 0.4rem;
+      margin-top: 2.5rem;
+      font-size: 1.5rem;
+    }
+
+    h3 {
+      color: #3730a3;
+      margin-top: 1.5rem;
+      font-size: 1.15rem;
+    }
+
+    p, li {
+      color: #334155;
+    }
+
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+
+    li {
+      margin-bottom: 0.4rem;
+    }
+
+    .card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-left: 4px solid #4f46e5;
+      padding: 1rem 1.25rem;
+      border-radius: 6px;
+      margin: 1.25rem 0;
+    }
+
+    .alert-box {
+      background: #fef2f2;
+      border-left: 4px solid #ef4444;
+      padding: 1rem;
+      border-radius: 6px;
+      margin: 1.25rem 0;
+      color: #991b1b;
+    }
+
+    pre, code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 0.9rem;
+    }
+
+    pre {
+      background: #0f172a;
+      color: #f8fafc;
+      padding: 1.25rem;
+      border-radius: 8px;
+      overflow-x: auto;
+      line-height: 1.4;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-size: 0.95rem;
+    }
+
+    th, td {
+      border: 1px solid #cbd5e1;
+      padding: 0.65rem 0.9rem;
+      text-align: left;
+    }
+
+    th {
+      background: #f1f5f9;
+      color: #1e293b;
+      font-weight: 600;
+    }
+
+    tr:nth-child(even) {
+      background: #f8fafc;
+    }
+
+    .critical-tag {
+      background: #fee2e2;
+      color: #b91c1c;
+      font-weight: 700;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      display: inline-block;
+    }
+
+    .noncritical-tag {
+      background: #f1f5f9;
+      color: #475569;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      display: inline-block;
+    }
+
+    .print-button {
+      background: #4f46e5;
+      color: white;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+      float: right;
+      transition: background 0.2s;
+    }
+
+    .print-button:hover {
+      background: #4338ca;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <button class="print-button no-print" onclick="window.print()">🖨️ Print / Save as PDF</button>
+
+  <div class="header-banner">
+    <h1>MindPulse AI</h1>
+    <div class="subtitle">Software Engineering & Project Management Notebook (Sections 1 to 7)</div>
+    <div class="meta-badges">
+      <span class="badge">Academic NLP & RAG</span>
+      <span class="badge">React 19 + FastAPI</span>
+      <span class="badge">ChromaDB + OpenAI</span>
+      <span class="badge">SE Lab Dossier</span>
+    </div>
+  </div>
+
+  <!-- SECTION 1 -->
+  <h2>1. Project Description (In Simple Words)</h2>
+  
+  <h3>❓ What is the problem?</h3>
+  <p>
+    When students or employees feel overwhelmed, sad, or burned out, they often write posts on Twitter, Reddit, or student forums.
+  </p>
+  <ul>
+    <li>Traditional tools just look for keywords like <code>"sad"</code> or <code>"depressed"</code> (which causes lots of mistakes).</li>
+    <li>Reading thousands of posts manually is impossible.</li>
+  </ul>
+
+  <h3>💡 What is MindPulse AI?</h3>
+  <p>
+    <strong>MindPulse AI</strong> is a smart web app that reads a social media post and answers 3 simple questions:
+  </p>
+  <ol>
+    <li><strong>Is the person in emotional distress?</strong> (<code>Yes</code> / <code>No</code>)</li>
+    <li><strong>Why are they distressed?</strong> It assigns the reason to one of <strong>6 clear categories</strong>:
+      <ul>
+        <li>🏢 <strong>Jobs/Career</strong>: Heavy workload, boss pressure, exam deadlines, unemployment.</li>
+        <li>💔 <strong>Relationship</strong>: Breakups, divorce, romantic grief, family arguments.</li>
+        <li>🛑 <strong>Bias/Abuse</strong>: Bullying, cyberbullying, threats, discrimination.</li>
+        <li>💊 <strong>Medication</strong>: Adverse side effects from psychiatric pills, dosage changes.</li>
+        <li>🕳️ <strong>Alienation</strong>: Chronic loneliness, feeling invisible or disconnected from everyone.</li>
+        <li>❓ <strong>No Reason</strong>: Feeling distressed without any clear cause mentioned.</li>
+      </ul>
+    </li>
+    <li><strong>What is the proof?</strong> It copies the <strong>exact verbatim words</strong> from the post as evidence (no hallucinations or speculation).</li>
+  </ol>
+
+  <div class="alert-box">
+    <strong>🛡️ Non-Diagnostic Ethical Rule:</strong><br>
+    MindPulse AI <strong>never provides medical or psychiatric diagnoses</strong>. It is strictly a linguistic research tool. If someone is in severe distress, it provides a 1-click button to contact 24/7 emergency crisis hotlines (such as <strong>988</strong>).
+  </div>
+
+  <div class="page-break"></div>
+
+  <!-- SECTION 2 -->
+  <h2>2. Level 1 Data Flow Diagram (DFD)</h2>
+  <p>A <strong>Level 1 DFD</strong> shows the internal processes, where data travels, and where data is stored.</p>
+
+  <h3>2.1 The 4 Core Elements</h3>
+  <ul>
+    <li><strong>External Entities</strong>: User (Researcher) and OpenAI API.</li>
+    <li><strong>Processes</strong>: 1.0, 2.0, 3.0, 4.0.</li>
+    <li><strong>Data Stores</strong>:
+      <ul>
+        <li><code>D1: Research Guidelines Database (ChromaDB)</code></li>
+        <li><code>D2: Session History Storage (RAM Buffer)</code></li>
+      </ul>
+    </li>
+    <li><strong>Data Flows</strong>: The data moving between them.</li>
+  </ul>
+
+  <h3>2.2 Level 1 DFD Architecture (Hand-Drawn & Exam Layout)</h3>
+  <pre>
+           +---------------------------------------+
+           |           User (Researcher)           |
+           +---------------------------------------+
+              |                                 ^
+      1. Post |                                 | 8. Display Result Card
+              v                                 |
+     +---------------------------------------------+
+     |         1.0 Receive & Clean Post            |
+     +---------------------------------------------+
+              |
+      2. Cleaned Post Text
+              v
+     +---------------------------------------------+       +-------------------------+
+     |       2.0 Find Matching Rules (RAG)         | <===> | D1: ChromaDB Guidelines |
+     +---------------------------------------------+       +-------------------------+
+              |
+      4. Post + Retrieved Guidelines
+              v
+     +---------------------------------------------+       +-------------------------+
+     |        3.0 Run AI Inference (LLM)           | <===> |    External OpenAI API  |
+     +---------------------------------------------+       +-------------------------+
+              |
+      6. Category + Extracted Quotes
+              v
+     +---------------------------------------------+       +-------------------------+
+     |        4.0 Format & Save Result             | <===> |   D2: Session History   |
+     +---------------------------------------------+       +-------------------------+
+  </pre>
+
+  <h3>2.3 Process Descriptions</h3>
+  <ul>
+    <li><strong>Process 1.0 (Receive & Clean Post)</strong>: Ingests raw post, validates length (&ge; 3 chars), removes malformed input.</li>
+    <li><strong>Process 2.0 (Find Matching Rules)</strong>: Vectorizes post and retrieves top-3 relevant research guidelines from ChromaDB.</li>
+    <li><strong>Process 3.0 (Run AI Inference)</strong>: Prompts OpenAI model ($T=0.0$) with retrieved context and post to classify and extract quotes.</li>
+    <li><strong>Process 4.0 (Format & Save Result)</strong>: Stores analysis in volatile session history and renders structured card on user interface.</li>
+  </ul>
+
+  <div class="page-break"></div>
+
+  <!-- SECTION 3 -->
+  <h2>3. Function Point Counting (FPC / FPA)</h2>
+  <p>Function Point Counting measures how much functionality software delivers to the user (like counting rooms in a house rather than counting bricks).</p>
+
+  <h3>Step 1: Count the 5 Core Components</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Component</th>
+        <th>What it is in MindPulse AI</th>
+        <th>Count</th>
+        <th>Complexity Weight</th>
+        <th>Total Points</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>External Inputs (EI)</strong></td>
+        <td>Single analyze, batch submit, clear history, presets</td>
+        <td>4</td>
+        <td>4 (Average)</td>
+        <td><strong>16</strong></td>
+      </tr>
+      <tr>
+        <td><strong>External Outputs (EO)</strong></td>
+        <td>Result card with quotes, batch charts, JSON export</td>
+        <td>3</td>
+        <td>6 (Average/High)</td>
+        <td><strong>18</strong></td>
+      </tr>
+      <tr>
+        <td><strong>External Inquiries (EQ)</strong></td>
+        <td>Health check, category list, presets, diagnostics, history</td>
+        <td>5</td>
+        <td>3 (Low)</td>
+        <td><strong>15</strong></td>
+      </tr>
+      <tr>
+        <td><strong>Internal Logical Files (ILF)</strong></td>
+        <td>Chroma vector database, session history RAM buffer</td>
+        <td>2</td>
+        <td>12 (Average/High)</td>
+        <td><strong>24</strong></td>
+      </tr>
+      <tr>
+        <td><strong>External Interface Files (EIF)</strong></td>
+        <td>OpenAI Embedding API, OpenAI Chat Completions API</td>
+        <td>2</td>
+        <td>9 (Average/High)</td>
+        <td><strong>18</strong></td>
+      </tr>
+      <tr>
+        <td colspan="4"><strong>TOTAL UNADJUSTED FUNCTION POINTS (UFP)</strong></td>
+        <td><strong>91 to 93 FP</strong></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="card">
+    <strong>Formula:</strong><br>
+    $$\text{UFP} = 16 + 18 + 15 + 24 + 18 = 91\text{ FP}$$
+  </div>
+
+  <h3>Step 2: Value Adjustment Factor (VAF)</h3>
+  <p>Evaluated across 14 standard technical characteristics (data communication, usability, performance, etc.). Sum of degrees of influence = 49:</p>
+  <div class="card">
+    $$\text{VAF} = 0.65 + (0.01 \times 49) = 0.65 + 0.49 = \mathbf{1.14}$$
+  </div>
+
+  <h3>Step 3: Final Adjusted Function Points (AFP)</h3>
+  <div class="card">
+    $$\text{AFP} = \text{UFP} \times \text{VAF} = 91 \times 1.14 \approx \mathbf{103.74\text{ to }106\text{ FP}}$$
+    <br>
+    <em>Converting to Code Size (Python &approx; 45 LOC/FP):</em><br>
+    $$\text{Code Size} = 104 \times 45 \approx \mathbf{4,680\text{ Lines of Code (4.68 KLOC)}}$$
+  </div>
+
+  <div class="page-break"></div>
+
+  <!-- SECTION 4 -->
+  <h2>4. COCOMO Model (Effort, Time, Cost Estimation)</h2>
+  <p>COCOMO (Constructive Cost Model) answers: <strong>How long will it take? How many developers do we need? How much will it cost?</strong></p>
+
+  <h3>Project Mode: Organic</h3>
+  <p>(Small team &le; 4 developers, familiar problem domain, flexible environment).</p>
+  <ul>
+    <li><strong>Size (KLOC)</strong>: $4.5\text{ KLOC}$ (&approx; 4,500 lines of code)</li>
+    <li><strong>Constants</strong>: $a = 2.4, \quad b = 1.05, \quad c = 2.5, \quad d = 0.38$</li>
+  </ul>
+
+  <div class="card">
+    <strong>1. Effort ($E$) in Person-Months:</strong><br>
+    $$\text{Effort} = a \times (\text{KLOC})^b = 2.4 \times (4.5)^{1.05} \approx 2.4 \times 4.85 \approx \mathbf{11.64\text{ Person-Months}}$$
+    <em>(Meaning 1 developer working alone would need &approx; 11.6 months).</em>
+    <br><br>
+    <strong>2. Development Time ($D$) in Calendar Months:</strong><br>
+    $$\text{Time} = c \times (\text{Effort})^d = 2.5 \times (11.64)^{0.38} \approx 2.5 \times 2.54 \approx \mathbf{6.35\text{ Months}}$$
+    <br>
+    <strong>3. Recommended Team Size ($S$):</strong><br>
+    $$\text{Team Size} = \frac{\text{Effort}}{\text{Time}} = \frac{11.64}{6.35} \approx \mathbf{1.83 \approx 2\text{ Full-Time Developers}}$$
+    <br>
+    <strong>4. Total Development Cost:</strong><br>
+    Assuming $\$4,000$ (or ₹1,00,000) per person-month:<br>
+    $$\text{Total Cost} = 11.64 \times \$4,000 \approx \mathbf{\$46,560}$$
+  </div>
+
+  <div class="page-break"></div>
+
+  <!-- SECTION 5 -->
+  <h2>5. Critical Path Method (CPM) Project Schedule</h2>
+  <p>The <strong>Critical Path</strong> is the longest sequence of dependent tasks. If any task on this path is delayed by even 1 day, the <strong>entire project deadline is delayed</strong>.</p>
+
+  <h3>Task Breakdown & Schedule Table</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Task</th>
+        <th>Task Description</th>
+        <th>Depends On</th>
+        <th>Days</th>
+        <th>ES</th>
+        <th>EF</th>
+        <th>LS</th>
+        <th>LF</th>
+        <th>Slack</th>
+        <th>Critical?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>A</strong></td>
+        <td>Requirements & Category Rules</td>
+        <td>None</td>
+        <td>5</td>
+        <td>0</td>
+        <td>5</td>
+        <td>0</td>
+        <td>5</td>
+        <td>0</td>
+        <td><span class="critical-tag">YES</span></td>
+      </tr>
+      <tr>
+        <td><strong>B</strong></td>
+        <td>Database & Vector Guidelines Setup</td>
+        <td>A</td>
+        <td>6</td>
+        <td>5</td>
+        <td>11</td>
+        <td>5</td>
+        <td>11</td>
+        <td>0</td>
+        <td><span class="critical-tag">YES</span></td>
+      </tr>
+      <tr>
+        <td><strong>C</strong></td>
+        <td>Backend API Architecture (FastAPI)</td>
+        <td>A</td>
+        <td>5</td>
+        <td>5</td>
+        <td>10</td>
+        <td>6</td>
+        <td>11</td>
+        <td>1</td>
+        <td><span class="noncritical-tag">No</span></td>
+      </tr>
+      <tr>
+        <td><strong>D</strong></td>
+        <td>RAG Search & LLM Inference Logic</td>
+        <td>B, C</td>
+        <td>8</td>
+        <td>11</td>
+        <td>19</td>
+        <td>11</td>
+        <td>19</td>
+        <td>0</td>
+        <td><span class="critical-tag">YES</span></td>
+      </tr>
+      <tr>
+        <td><strong>E</strong></td>
+        <td>Frontend UI Design (React)</td>
+        <td>A</td>
+        <td>6</td>
+        <td>5</td>
+        <td>11</td>
+        <td>9</td>
+        <td>15</td>
+        <td>4</td>
+        <td><span class="noncritical-tag">No</span></td>
+      </tr>
+      <tr>
+        <td><strong>F</strong></td>
+        <td>Connect Frontend + Backend (API)</td>
+        <td>D, E</td>
+        <td>4</td>
+        <td>19</td>
+        <td>23</td>
+        <td>19</td>
+        <td>23</td>
+        <td>0</td>
+        <td><span class="critical-tag">YES</span></td>
+      </tr>
+      <tr>
+        <td><strong>G</strong></td>
+        <td>End-to-End Testing & Bug Fixing</td>
+        <td>F</td>
+        <td>5</td>
+        <td>23</td>
+        <td>28</td>
+        <td>23</td>
+        <td>28</td>
+        <td>0</td>
+        <td><span class="critical-tag">YES</span></td>
+      </tr>
+      <tr>
+        <td><strong>H</strong></td>
+        <td>Final Documentation & Presentation</td>
+        <td>G</td>
+        <td>3</td>
+        <td>28</td>
+        <td>31</td>
+        <td>28</td>
+        <td>31</td>
+        <td>0</td>
+        <td><span class="critical-tag">YES</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="card">
+    <strong>Critical Path:</strong><br>
+    $$\mathbf{A \rightarrow B \rightarrow D \rightarrow F \rightarrow G \rightarrow H}$$
+    <br>
+    <strong>Total Project Duration:</strong><br>
+    $$5 + 6 + 8 + 4 + 5 + 3 = \mathbf{31\text{ Working Days}} \quad (\approx 6\text{ Weeks})$$
+  </div>
+
+  <div class="page-break"></div>
+
+  <!-- SECTION 6 -->
+  <h2>6. Agile User Stories (In Simple Format)</h2>
+  <p>Format: <strong>"As a [role], I want to [action], so that [benefit]."</strong></p>
+
+  <div class="card">
+    <h3>Story 1: Single Post Analysis</h3>
+    <ul>
+      <li><strong>As a</strong>: Researcher or evaluator,</li>
+      <li><strong>I want to</strong>: Paste a single social media post and click "Analyze",</li>
+      <li><strong>So that</strong>: I can see if distress exists, which of the 6 categories caused it, and read the exact evidence quotes.</li>
+      <li><strong>Done When</strong>:
+        <ul>
+          <li>The predicted category is shown clearly.</li>
+          <li>Verbatim words from the post are highlighted as proof.</li>
+        </ul>
+      </li>
+      <li><strong>Points</strong>: 5</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Story 2: Batch Analysis of Multiple Posts</h3>
+    <ul>
+      <li><strong>As a</strong>: Data scientist,</li>
+      <li><strong>I want to</strong>: Paste up to 25 posts separated by blank lines,</li>
+      <li><strong>So that</strong>: I can analyze an entire test dataset at once and see an aggregate category percentage bar.</li>
+      <li><strong>Done When</strong>:
+        <ul>
+          <li>All posts are processed without server crashes.</li>
+          <li>A summary graph shows the category distribution.</li>
+        </ul>
+      </li>
+      <li><strong>Points</strong>: 8</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Story 3: Emergency Helpline Modal</h3>
+    <ul>
+      <li><strong>As a</strong>: User who may be experiencing acute distress,</li>
+      <li><strong>I want to</strong>: Click a "Crisis Resources" badge,</li>
+      <li><strong>So that</strong>: I can see 24/7 verified crisis phone numbers (like 988) and call them directly.</li>
+      <li><strong>Done When</strong>:
+        <ul>
+          <li>Clicking the badge opens a popup with verified telephone and SMS helplines.</li>
+        </ul>
+      </li>
+      <li><strong>Points</strong>: 2</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Story 4: Clickable Sample Presets</h3>
+    <ul>
+      <li><strong>As an</strong>: Examiner testing the project,</li>
+      <li><strong>I want to</strong>: Click preset buttons (like "Job Burnout" or "Breakup"),</li>
+      <li><strong>So that</strong>: I don't have to write my own test posts.</li>
+      <li><strong>Done When</strong>:
+        <ul>
+          <li>Clicking any chip instantly fills the input text box with a verified benchmark post.</li>
+        </ul>
+      </li>
+      <li><strong>Points</strong>: 2</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Story 5: Export Session History to JSON</h3>
+    <ul>
+      <li><strong>As a</strong>: Student or researcher,</li>
+      <li><strong>I want to</strong>: Click "Export JSON",</li>
+      <li><strong>So that</strong>: I can download all my analyzed posts and evidence quotes to include in my project submission.</li>
+      <li><strong>Done When</strong>:
+        <ul>
+          <li>A <code>.json</code> file containing all recent analyses downloads automatically.</li>
+        </ul>
+      </li>
+      <li><strong>Points</strong>: 3</li>
+    </ul>
+  </div>
+
+  <div class="page-break"></div>
+
+  <!-- SECTION 7 -->
+  <h2>7. Quick Viva Cheat Sheet (For Evaluation)</h2>
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 35%;">Viva Question</th>
+        <th>Easy 1-Sentence Answer</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>What does MindPulse AI do?</strong></td>
+        <td>Reads a social media post, checks for emotional distress, classifies the reason into 6 categories, and copies the exact words as proof.</td>
+      </tr>
+      <tr>
+        <td><strong>Why use RAG with ChromaDB?</strong></td>
+        <td>To ground the AI in strict research rules so it does not hallucinate or make speculative guesses.</td>
+      </tr>
+      <tr>
+        <td><strong>What is the Function Point (FP) count?</strong></td>
+        <td>Around <strong>104 to 106 FP</strong>, which equals roughly <strong>4,500 lines of code</strong>.</td>
+      </tr>
+      <tr>
+        <td><strong>What does COCOMO tell us?</strong></td>
+        <td>About <strong>11.6 person-months of effort</strong>, taking <strong>~6 months with a team of 2 developers</strong>.</td>
+      </tr>
+      <tr>
+        <td><strong>What is the Critical Path?</strong></td>
+        <td>$$A \rightarrow B \rightarrow D \rightarrow F \rightarrow G \rightarrow H$$, taking exactly <strong>31 working days</strong> (~6 weeks).</td>
+      </tr>
+      <tr>
+        <td><strong>Does it give clinical diagnosis?</strong></td>
+        <td><strong>No.</strong> It is strictly a linguistic research tool; clinical diagnosis requires a licensed doctor.</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+</body>
+</html>
+

@@ -8,22 +8,40 @@ from fastapi import FastAPI, HTTPException, status
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 
-from backend.config import OPENAI_API_KEY
-from backend.models import (
-    AnalyzePostRequest,
-    PostAnalysisResponse,
-    BatchAnalyzeRequest,
-    BatchAnalyzeResponse,
-    SamplePost,
-    CategoryDefinition,
-    KnowledgeBaseInfo,
-    HealthResponse,
-)
-from backend.analyzer import (
-    analyzer,
-    SAMPLE_POSTS,
-    CATEGORIES,
-)
+try:
+    from backend.config import OPENAI_API_KEY
+    from backend.models import (
+        AnalyzePostRequest,
+        PostAnalysisResponse,
+        BatchAnalyzeRequest,
+        BatchAnalyzeResponse,
+        SamplePost,
+        CategoryDefinition,
+        KnowledgeBaseInfo,
+        HealthResponse,
+    )
+    from backend.analyzer import (
+        analyzer,
+        SAMPLE_POSTS,
+        CATEGORIES,
+    )
+except ImportError:
+    from config import OPENAI_API_KEY
+    from models import (
+        AnalyzePostRequest,
+        PostAnalysisResponse,
+        BatchAnalyzeRequest,
+        BatchAnalyzeResponse,
+        SamplePost,
+        CategoryDefinition,
+        KnowledgeBaseInfo,
+        HealthResponse,
+    )
+    from analyzer import (
+        analyzer,
+        SAMPLE_POSTS,
+        CATEGORIES,
+    )
 
 # Setup logging
 logging.basicConfig(level=logging.INFO)
